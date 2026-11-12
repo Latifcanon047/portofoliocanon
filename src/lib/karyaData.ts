@@ -96,4 +96,72 @@ export const PROJECTS: ProjectData[] = [
       },
     ],
   },
+  {
+    id: "seblak",
+    name: "Dapur Seblak", // sementara, dari tulisan di UI
+    description:
+      "Aplikasi pemesanan berbasis web untuk tempat makan seblak. Pelanggan memindai kode QR di meja, memesan, membayar, dan memantau status pesanan. Admin mengelola order, menu, dan laporan, dengan struk tercetak otomatis.",
+    orientation: "portrait",
+    demoUrl: "#", // TODO: ganti dengan tautan demo sebelum deploy
+    cards: [
+      {
+        title: "Pilih Menu",
+        description:
+          "Pilih seblak sesuai topping, lalu tambah minuman dan makanan penutup. Setelah itu lanjut ke pembayaran.",
+        image: "/karya/seblak/menu.png",
+      },
+      {
+        title: "Konfirmasi Pesanan",
+        description:
+          "Periksa pesananmu, isi nama, lalu pilih bayar lewat E-Wallet atau langsung di kasir.",
+        image: "/karya/seblak/konfirmasi.png",
+      },
+      {
+        title: "Status Pesanan",
+        description:
+          "Pantau pesananmu langsung: baru diterima, sedang dimasak, atau sudah selesai. Status diperbarui otomatis.",
+        image: "/karya/seblak/status.png",
+      },
+      {
+        title: "Panel Admin",
+        description:
+          "Kelola order, menu, meja, dan kode QR dari satu panel, lengkap dengan riwayat order dan laporan penjualan. Struk tercetak otomatis saat pesanan selesai.",
+        image: "/karya/seblak/admin.png",
+      },
+    ],
+  },
+  {
+    id: "absensi",
+    name: "Absensi Pesantren", // sementara, dari tulisan di UI
+    description:
+      "Aplikasi web untuk mengelola absensi dan kedisiplinan santri di pesantren. Admin mencatat absen sholat dan kelas, lalu sistem merekap kehadiran, skor kedisiplinan, dan peringkat santri dalam rentang tanggal yang dipilih.",
+    orientation: "landscape",
+    demoUrl: "#", // TODO: ganti dengan tautan demo sebelum deploy
+    cards: [
+      {
+        title: "Dashboard",
+        description:
+          "Navigasi cepat ke Rekap Absensi, Leaderboard, Rekap Piket, dan Data Absen dalam satu klik.",
+        image: "/karya/absensi/dashboard.png",
+      },
+      {
+        title: "Rekap Absen",
+        description:
+          "Filter per rentang tanggal, lihat hadir, telat, sakit, izin, alpa, skor persen, ringkasan, dan grafik.",
+        image: "/karya/absensi/rekap.png",
+      },
+      {
+        title: "Leaderboard",
+        description:
+          "Peringkat santri dari yang terbaik, lengkap dengan persentase kedisiplinan, tanggung jawab, dan skor final.",
+        image: "/karya/absensi/leaderboard.png",
+      },
+      {
+        title: "Panel Admin",
+        description:
+          "Kelola data santri dan isi absen sholat serta kelas per santri, bisa tandai semua hadir lalu submit sekaligus.",
+        image: "/karya/absensi/admin.png",
+      },
+    ],
+  },
 ];
