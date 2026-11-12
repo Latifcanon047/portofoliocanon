@@ -90,7 +90,8 @@ export default function Tentang() {
           </p>
         </div>
 
-        <div className="flex flex-col justify-center gap-8 md:pl-10 [text-shadow:0_0_3px_rgba(255,255,255,0.7),0_0_10px_rgba(255,255,255,0.55)]">
+        <div className="flex flex-col justify-center gap-8 md:pl-10">
+          {" "}
           <div className="flex flex-col gap-5">
             {SKILLS.map((s) => (
               <div key={s.group}>
@@ -101,7 +102,7 @@ export default function Tentang() {
                   {s.items.map((item) => (
                     <li
                       key={item}
-                      className="rounded-full bg-accent px-4 py-1.5 text-sm font-semibold text-foreground"
+                      className="rounded-full bg-accent px-4 py-1.5 text-sm font-semibold text-black"
                     >
                       {item}
                     </li>
@@ -110,7 +111,6 @@ export default function Tentang() {
               </div>
             ))}
           </div>
-
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-widest text-foreground">
               Pendidikan
