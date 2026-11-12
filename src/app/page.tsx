@@ -1,4 +1,5 @@
 import SceneCanvas from "@/components/canvas/SceneCanvas";
+import Hero from "@/components/sections/Hero";
 import Karya from "@/components/sections/Karya";
 
 export default function Home() {
@@ -6,7 +7,8 @@ export default function Home() {
     <>
       <SceneCanvas />
       <main className="relative z-10">
-        <Karya />
+        <Hero />
+        <Karya />{" "}
       </main>
     </>
   );

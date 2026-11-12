@@ -23,7 +23,7 @@ const DESC_EXTRA_DELAY_MS = 80; // jeda tambahan sebelum deskripsi mulai
 
 // Teks yang diketik. Bagian yang belum diketik tetap memakan tempat (invisible),
 // jadi tata letak dan baris baru sudah final sejak awal dan tidak bergeser.
-function Typed({
+export function Typed({
   full,
   text,
   cursor,
