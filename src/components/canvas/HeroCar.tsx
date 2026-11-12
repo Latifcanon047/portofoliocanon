@@ -14,6 +14,11 @@ const MODEL = "/models/bmw.glb";
 const WHEEL_NODES = ["wheel_F1", "wheel_F2", "wheel_R1", "wheel_R2"];
 const WIDE_BREAKPOINT = 768; // px, sama dengan KartuRing
 
+// Tambahan jarak "pergi" (fraksi lebar layar) supaya buntut mobil ikut hilang.
+// Perlu karena mobil miring (yaw) dan perspektif membuat buntutnya lebih
+// ke dalam layar daripada hitungan panjang saja.
+const GONE_EXTRA = 0.15;
+
 type CarState = {
   x: number;
   prevX: number;
@@ -64,7 +69,7 @@ export default function HeroCar() {
     const half = (model.size.z * scale) / 2;
     const g = {
       park: vw * (HERO_CAR.columnCenter - 0.5 - RING_OFFSET_X),
-      gone: -vw * (0.5 + RING_OFFSET_X) - half, // sepenuhnya di luar kiri
+      gone: -vw * (0.5 + RING_OFFSET_X + GONE_EXTRA) - half, // sepenuhnya di luar kiri
       arrive: vw * (0.5 - RING_OFFSET_X) + half, // sepenuhnya di luar kanan
     };
 

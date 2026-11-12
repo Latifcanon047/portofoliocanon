@@ -16,6 +16,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -65,5 +70,28 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .karya-word {
     animation: none;
+  }
+}
+
+@keyframes rotate-hint-tilt {
+  0%,
+  15% {
+    transform: rotate(0deg);
+  }
+  45%,
+  70% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.rotate-hint-icon {
+  animation: rotate-hint-tilt 2.6s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rotate-hint-icon {
+    animation: none;
+    transform: rotate(-90deg);
   }
 }
