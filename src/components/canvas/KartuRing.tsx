@@ -25,7 +25,7 @@ const PLACEHOLDER_COLORS = [
   "#d946ef",
 ];
 
-const RING_OFFSET_X = 0.19; // fraksi lebar layar dari tengah (0.19 = pusat cincin di ±69%)
+export const RING_OFFSET_X = 0.19; // fraksi lebar layar dari tengah (0.19 = pusat cincin di ±69%)
 const RING_SCALE = 0.85; // skala cincin di layar lebar (1 = ukuran penuh)
 const WIDE_BREAKPOINT = 768; // px, sama dengan breakpoint md Tailwind
 

@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { KARYA } from "@/lib/karya";
 import { useTypewriter } from "@/lib/useTypewriter";
+import { HERO_CAR, heroCar } from "@/lib/heroCar";
 import { Typed } from "./KaryaProject";
 
 const SLIDES = [
@@ -90,7 +91,26 @@ export default function Hero() {
       onRefresh: (self) => sync(self.progress),
     });
 
-    return () => pin.kill(true);
+    // Mobil pergi sedikit setelah pin hero selesai (halaman mulai turun ke Karya),
+    // dan kembali parkir saat scroll naik lagi.
+    const leave = ScrollTrigger.create({
+      start: () => pin.end + (window.innerHeight * HERO_CAR.leaveVh) / 100,
+      end: "max",
+      onEnter: () => {
+        heroCar.parked = false;
+      },
+      onLeaveBack: () => {
+        heroCar.parked = true;
+      },
+      onRefresh: (self) => {
+        heroCar.parked = self.scroll() < self.start;
+      },
+    });
+
+    return () => {
+      leave.kill();
+      pin.kill(true);
+    };
   }, [count]);
 
   const toKarya = () =>
