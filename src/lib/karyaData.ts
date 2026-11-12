@@ -102,7 +102,7 @@ export const PROJECTS: ProjectData[] = [
     description:
       "Aplikasi pemesanan berbasis web untuk tempat makan seblak. Pelanggan memindai kode QR di meja, memesan, membayar, dan memantau status pesanan. Admin mengelola order, menu, dan laporan, dengan struk tercetak otomatis.",
     orientation: "portrait",
-    demoUrl: "#", // TODO: ganti dengan tautan demo sebelum deploy
+    demoUrl: "https://seblak-prasmanan-omega.vercel.app/", // TODO: ganti dengan tautan demo sebelum deploy
     cards: [
       {
         title: "Pilih Menu",
@@ -136,7 +136,7 @@ export const PROJECTS: ProjectData[] = [
     description:
       "Aplikasi web untuk mengelola absensi dan kedisiplinan santri di pesantren. Admin mencatat absen sholat dan kelas, lalu sistem merekap kehadiran, skor kedisiplinan, dan peringkat santri dalam rentang tanggal yang dipilih.",
     orientation: "landscape",
-    demoUrl: "#", // TODO: ganti dengan tautan demo sebelum deploy
+    demoUrl: "https://absensi-stfq-bandung.vercel.app/", // TODO: ganti dengan tautan demo sebelum deploy
     cards: [
       {
         title: "Dashboard",
