@@ -7,6 +7,7 @@ import { Box3, Vector3 } from "three";
 import type { Group, Object3D } from "three";
 import gsap from "gsap";
 import { HERO_CAR, heroCar } from "@/lib/heroCar";
+import { playSound } from "@/lib/heroAudio";
 import { RING_OFFSET_X } from "./KartuRing";
 
 const MODEL = "/models/bmw.glb";
@@ -67,8 +68,9 @@ export default function HeroCar() {
       arrive: vw * (0.5 - RING_OFFSET_X) + half, // sepenuhnya di luar kanan
     };
 
-    const play = (toParked: boolean, delay = 0) => {
+    const play = (toParked: boolean) => {
       s.tween?.kill();
+      if (toParked) playSound("datang"); // suara duluan, mobil menyusul
       if (toParked && s.x <= g.gone) {
         s.x = g.arrive; // sudah di luar kiri: masuk lagi dari kanan
         s.prevX = s.x;
@@ -77,7 +79,8 @@ export default function HeroCar() {
       s.tween = gsap.to(s, {
         x: toParked ? g.park : g.gone,
         duration: toParked ? HERO_CAR.introDuration : HERO_CAR.exitDuration,
-        delay,
+        delay: toParked ? HERO_CAR.introDelay : 0,
+        onStart: toParked ? undefined : () => playSound("pergi"),
         ease: toParked ? "power3.out" : "power3.in",
         onComplete: () => {
           s.moving = false;
@@ -91,9 +94,9 @@ export default function HeroCar() {
       if (heroCar.parked) {
         s.x = g.arrive;
         s.prevX = s.x;
-        play(true, HERO_CAR.introDelay);
+        play(true);
       } else {
-        s.x = g.gone; // reload di bawah hero: langsung "sudah pergi"
+        s.x = g.gone; // reload di bawah hero: langsung "sudah pergi"s
         s.prevX = s.x;
       }
     } else if (heroCar.parked !== s.last) {

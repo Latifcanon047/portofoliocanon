@@ -8,7 +8,7 @@ export const HERO_CAR = {
   yaw: -Math.PI / 2 + 0.3, // -90° = tampak samping, menghadap kiri; +0.3 = sedikit miring 3/4
   yShift: 0, // geser vertikal (fraksi tinggi layar, + = naik)
   introDuration: 2.2, // detik, mobil masuk lalu melambat
-  introDelay: 0.3, // detik jeda setelah model siap
+  introDelay: 0.8, // detik: mobil baru mulai muncul setelah suara datang berjalan segini lama
   exitDuration: 1.2, // detik, mobil melesat pergi
   leaveVh: 6, // mobil pergi setelah hero lewat sekian vh
   wheelRadius: 1.52, // jari-jari roda di unit model (dari geometri)

@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { KARYA } from "@/lib/karya";
 import { useTypewriter } from "@/lib/useTypewriter";
 import { HERO_CAR, heroCar } from "@/lib/heroCar";
+import { playSound } from "@/lib/heroAudio";
 import { Typed } from "./KaryaProject";
 
 const SLIDES = [
@@ -64,6 +65,13 @@ export default function Hero() {
   const [active, setActive] = useState(0);
   const count = SLIDES.length;
   const slide = SLIDES[active];
+
+  // Geber tiap titik berganti (maju maupun mundur), bukan saat pertama render.
+  const prevActive = useRef(0);
+  useEffect(() => {
+    if (prevActive.current !== active) playSound("geber");
+    prevActive.current = active;
+  }, [active]);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
