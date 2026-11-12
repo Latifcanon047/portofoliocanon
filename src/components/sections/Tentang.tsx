@@ -9,14 +9,15 @@ import { Typed } from "./KaryaProject";
 // Teks (ubah di sini).
 const ABOUT_TITLE = "Tentang saya";
 const ABOUT_TEXT =
-  "Aku Canon, fullstack web developer. Aku suka memecahkan masalah nyata dengan teknologi, dari ide sampai produk jadi: antarmuka, backend, database, sampai deploy. Nodea dan Jawhan adalah dua yang sudah rilis.";
+  "Aku Latief, fullstack web developer. Aku suka memecahkan masalah nyata dengan teknologi, dari ide sampai produk jadi: antarmuka, backend, database, sampai deploy. Sejauh ini aku sudah membuat Nodea, Jawhan, Dapur Seblak, dan Absensi Pesantren.";
 
 const SKILLS = [
   {
     group: "Frontend",
     items: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand"],
   },
-  { group: "Backend & Data", items: ["Prisma", "PostgreSQL (Neon)"] },
+  { group: "Backend & Data", items: ["Prisma", "PostgreSQL", "MySQL"] },
+  { group: "Payment & Security", items: ["Payment (Midtrans)", "Security"] },
   { group: "Media & Deploy", items: ["Cloudinary"] },
 ];
 

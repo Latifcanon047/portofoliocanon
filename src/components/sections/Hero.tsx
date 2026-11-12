@@ -11,7 +11,7 @@ import { playSound } from "@/lib/heroAudio";
 import { Typed } from "./KaryaProject";
 
 const SLIDES = [
-  { title: "Halo, aku Canon.", text: "Fullstack Web Developer." },
+  { title: "Halo, aku Latief.", text: "Fullstack Web Developer." },
   {
     title: "Masalah nyata, solusi nyata.",
     text: "Aku memecahkan masalah nyata dengan teknologi, dari ide sampai produk jadi.",
@@ -22,11 +22,11 @@ const SLIDES = [
   },
   {
     title: "Stack-ku.",
-    text: "Next.js, TypeScript, Tailwind CSS, Zustand, Prisma, PostgreSQL, dan Cloudinary.",
+    text: "Next.js, TypeScript, Tailwind CSS, Zustand, Prisma, PostgreSQL, MySQL, Midtrans, Cloudinary, dan keamanan aplikasi.",
   },
   {
     title: "Sudah rilis.",
-    text: "Nodea dan Jawhan sudah live, lihat di bawah.",
+    text: "Nodea, Jawhan, Dapur Seblak, dan Absensi Pesantren, lihat di bawah.",
   },
 ];
 
@@ -130,12 +130,13 @@ export default function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-y-0 left-0 hidden w-[55%] bg-linear-to-r from-black via-black/70 to-transparent md:block"
       />
-      <h1 className="sr-only">Canon, Fullstack Web Developer</h1>
+      <h1 className="sr-only">Latief, Fullstack Web Developer</h1>
 
       <div className="relative flex h-full flex-col px-6 py-8 md:grid-cols-[1fr_1fr] md:gap-10 md:px-12">
         <div className="flex flex-col justify-center">
           <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-8">
-            <div className="relative h-40 w-40 shrink-0 overflow-hidden rounded-full border-2 border-accent md:h-56 md:w-56 2xl:h-64 2xl:w-64">
+            <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border-2 border-accent md:h-56 md:w-56 2xl:h-64 2xl:w-64">
+              {" "}
               <Image
                 src="/foto/canon.jpg"
                 alt="Foto Canon"
