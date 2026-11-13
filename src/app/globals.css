@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Layar pendek (HP landscape). Ubah 500px kalau perlu. */
+@custom-variant short (@media (max-height: 500px));
+
 :root {
   --background: #6c151e;
   --foreground: #f5dabf;

@@ -49,10 +49,10 @@ function HeroSlide({ title, text }: { title: string; text: string }) {
 
   return (
     <>
-      <h2 className="text-3xl font-bold text-white md:text-4xl">
+      <h2 className="text-3xl font-bold text-white md:text-4xl short:text-2xl">
         <Typed full={title} text={t.text} cursor={!t.done} />
       </h2>
-      <p className="mt-3 max-w-md text-sm leading-relaxed text-white/85 md:text-base">
+      <p className="mt-3 max-w-md text-sm leading-relaxed text-white/85 md:text-base short:text-sm">
         {" "}
         <Typed full={text} text={d.text} cursor={t.done} />
       </p>
@@ -132,10 +132,11 @@ export default function Hero() {
       />
       <h1 className="sr-only">Latief, Fullstack Web Developer</h1>
 
-      <div className="relative flex h-full flex-col px-6 py-8 md:grid-cols-[1fr_1fr] md:gap-10 md:px-12">
+      <div className="relative flex h-full flex-col px-6 py-8 short:py-3 md:grid-cols-[1fr_1fr] md:gap-10 md:px-12">
+        {" "}
         <div className="flex flex-col justify-center">
           <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-8">
-            <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border-2 border-accent md:h-56 md:w-56 2xl:h-64 2xl:w-64">
+            <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border-2 border-accent md:h-56 md:w-56 short:h-28 short:w-28 2xl:h-64 2xl:w-64">
               {" "}
               <Image
                 src="/foto/canon.jpg"
@@ -149,7 +150,10 @@ export default function Hero() {
             </div>
 
             <div className="min-w-0 flex-1">
-              <div aria-live="polite" className="min-h-48 md:translate-y-8">
+              <div
+                aria-live="polite"
+                className="min-h-48 md:translate-y-8 short:min-h-32 short:translate-y-0"
+              >
                 {" "}
                 <HeroSlide key={active} title={slide.title} text={slide.text} />
               </div>
@@ -157,7 +161,7 @@ export default function Hero() {
               <div
                 role="img"
                 aria-label={`Slide ${active + 1} dari ${count}`}
-                className="mt-16 flex gap-3"
+                className="mt-16 short:mt-4 flex gap-3"
               >
                 {Array.from({ length: count }, (_, i) => (
                   <span
@@ -172,14 +176,13 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={toKarya}
-                className="mt-6 inline-block rounded-full border border-accent px-5 py-2 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-background"
+                className="mt-6 short:mt-3 inline-block rounded-full border border-accent px-5 py-2 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-background"
               >
                 Lihat karya
               </button>
             </div>
           </div>
         </div>
-
         {/* Slot kanan: BMW atau video (Langkah 5b) */}
         <div aria-hidden className="hidden md:block" />
       </div>

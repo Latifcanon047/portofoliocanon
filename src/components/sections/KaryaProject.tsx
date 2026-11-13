@@ -209,7 +209,7 @@ export default function KaryaProject({ project }: { project: ProjectData }) {
         HP: urutan ke bawah = judul, ruang cincin, penjelasan, titik + teks kartu.
         `contents` melebur pembungkus kolom di HP supaya `order` bisa mengatur urutannya.
       */}
-      <div className="relative flex h-full flex-col px-6 py-8 md:grid md:grid-cols-[2fr_3fr] md:gap-10 md:px-12">
+      <div className="relative flex h-full flex-col px-6 py-8 short:py-3 md:grid md:grid-cols-[2fr_3fr] md:gap-10 md:px-12">
         {" "}
         <div className="contents md:flex md:flex-col md:justify-center">
           <div className="order-1 md:order-none">
@@ -217,7 +217,7 @@ export default function KaryaProject({ project }: { project: ProjectData }) {
               {" "}
               Karya
             </p>
-            <h2 className="mt-2 text-4xl font-bold text-white md:text-6xl">
+            <h2 className="mt-2 text-4xl font-bold text-white md:text-6xl short:text-3xl">
               {" "}
               <Typed
                 full={titleText}
@@ -228,8 +228,8 @@ export default function KaryaProject({ project }: { project: ProjectData }) {
             </h2>
           </div>
 
-          <div className="order-3 mt-4 md:order-none md:mt-8">
-            <p className="max-w-lg text-sm leading-relaxed text-white/85 md:text-base">
+          <div className="order-3 mt-4 md:order-none md:mt-8 short:mt-2">
+            <p className="max-w-lg text-sm leading-relaxed text-white/85 md:text-base short:text-sm">
               {" "}
               <Typed
                 full={project.description}
@@ -241,7 +241,7 @@ export default function KaryaProject({ project }: { project: ProjectData }) {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-block rounded-full border border-accent px-5 py-2 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-background"
+              className="mt-6 short:mt-3 inline-block rounded-full border border-accent px-5 py-2 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-background"
             >
               Lihat demo live
             </a>
@@ -255,7 +255,7 @@ export default function KaryaProject({ project }: { project: ProjectData }) {
             <div
               role="img"
               aria-label={`Kartu ${active + 1} dari ${count}`}
-              className="mb-5 flex justify-center gap-3"
+              className="mb-5 short:mb-2 flex justify-center gap-3"
             >
               {Array.from({ length: count }, (_, i) => (
                 <span
