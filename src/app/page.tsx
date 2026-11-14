@@ -1,6 +1,7 @@
 import SceneCanvas from "@/components/canvas/SceneCanvas";
 import SoundToggle from "@/components/SoundToggle";
 import RotateHint from "@/components/RotateHint";
+import PageNav from "@/components/PageNav";
 import Hero from "@/components/sections/Hero";
 import Karya from "@/components/sections/Karya";
 import Tentang from "@/components/sections/Tentang";
@@ -9,6 +10,7 @@ export default function Home() {
     <>
       <SceneCanvas />
       <SoundToggle />
+      <PageNav />
       <RotateHint />{" "}
       <main className="relative z-10">
         <Hero />
